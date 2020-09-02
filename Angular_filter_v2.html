@@ -1,0 +1,23 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="arrCtrl">
+<ul>
+    <li ng-repeat="x in customers | filter : 'London':true">
+        {{x.name + ',' + x.city}}
+    </li>
+</ul>
+</div>
+<script>
+var app=angular.module('myApp',[]);
+app.controller('arrCtrl',function($scope){
+    $scope.customers=[
+        {"name":"Alan","city":"London"},
+        {"name":"Alex","city":"London city"},
+        {"name":"Abbey","city":"London"}
+    ];
+});
+</script>
+</body>
+</html>

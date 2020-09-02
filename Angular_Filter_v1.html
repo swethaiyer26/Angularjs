@@ -1,0 +1,27 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="arrCtrl">
+
+<ul>
+<li ng-repeat="x in customers | filter : {'name' : 'O', 'city' : 'London'}">{{x.name + ", " + x.city}}</li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('arrCtrl', function($scope) {
+    $scope.customers = [
+        {"name" : "Alfreds Futterkiste", "city" : "Berlin"},
+        {"name" : "Around the Horn", "city" : "London"},
+        {"name" : "B's Beverages", "city" : "London"},
+    ];
+});
+</script>
+
+<p>The filter will give a match if there is an "O" in the name, and the city is "London".</p>
+
+</body>
+</html>
