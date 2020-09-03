@@ -1,0 +1,19 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-App="myApp" ng-controller="myCtrl">
+<h1>{{hex}}</h1>
+</div>
+<script>
+    var app=angular.module('myApp',[]);
+    app.service('hexafy',function(){
+        this.myFunc=function(x){
+            return x.toString(16);
+        }
+    });
+    app.controller('myCtrl',function($scope,hexafy){
+     $scope.hex=hexafy.myFunc(255);
+        });
+</script>
+</body>
+</html>
