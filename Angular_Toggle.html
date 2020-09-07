@@ -1,0 +1,23 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+<button ng-click="myFunction()">Click me!!</button>
+<div ng-show="showMe">
+<h1>Menu List</h1>
+<div>Pizza</div>
+<div>Pasta</div>
+<div>Peas</div>
+</div>
+</div>
+<script>
+var app=angular.module('myApp',[]);
+app.controller('myCtrl',function($scope){
+$scope.showMe=false;
+$scope.myFunction=function(){
+    $scope.showMe=!$scope.showMe;
+}
+});
+</script>
+</body>
+</html>
