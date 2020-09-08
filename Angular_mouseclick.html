@@ -2,13 +2,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
 <div ng-app="myApp" ng-controller="myCtrl">
-<button ng-click="count=count+1">Click me!!</button>
+<button ng-click="myFunction()">Click me!!</button>
 <p>{{count}}</p>
 </div>
 <script>
 var app=angular.module("myApp",[]);
 app.controller('myCtrl',function($scope){
 $scope.count=1;
+$scope.myFunction=function(){
+$scope.count++;
+}
 });
 </script>
 </body>

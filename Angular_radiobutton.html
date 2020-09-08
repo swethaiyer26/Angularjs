@@ -1,0 +1,27 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-app="">
+<form>
+Pick a topic:
+<input type="radio" ng-model="myVar" value="Dogs">Dogs
+<input type="radio" ng-model="myVar" value="Cats">Cats
+<input type="radio" ng-model="myVar" value="Ducks">Ducks
+</form>
+<div ng-switch="myVar">
+<div ng-switch-when="Dogs">
+<h1>Dogs</h1>
+<p>Mans best friend</p>
+</div>
+<div ng-switch-when="Cats">
+<h1>Cats</h1>
+<p>Furry pets</p>
+</div>
+<div ng-switch-when="Ducks">
+    <h1>Ducks</h1>
+    <p>Found in lakes</p>
+    </div>
+</div>
+</div>
+</body>
+</html>

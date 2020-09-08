@@ -1,0 +1,30 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-app="">
+<form>
+Select a topic:
+<select ng-model="myVar">
+<option value="">
+<option value="Dogs">Dogs
+<option value="Cats">Cats
+<option value="Ducks">Ducks
+</select> 
+</form>
+<div ng-switch="myVar">
+    <div ng-switch-when="Dogs">
+    <h1>Dogs</h1>
+    <p>Mans best friend</p>
+    </div>
+    <div ng-switch-when="Cats">
+    <h1>Cats</h1>
+    <p>Furry pets</p>
+    </div>
+    <div ng-switch-when="Ducks">
+        <h1>Ducks</h1>
+        <p>Found in lakes</p>
+        </div>
+    </div>
+    </div>
+    </body>
+    </html>
