@@ -1,0 +1,11 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+<body ng-app="">
+<form name="myForm">
+<input name="myInput" ng-model="myInput" required>
+</form>
+<p>The inputs valid state is:</p>
+<h1>{{myForm.myInput.$valid}}</h1>
+</form>
+</body>
+</html>
